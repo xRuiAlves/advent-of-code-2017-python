@@ -1,40 +1,7 @@
 #!/usr/bin/python3
 import re
 
-def main():
-    try:
-        file = open("Input_Day11" , "r")
-    except IOError:
-        print("*** ERROR: Could not open file for reading input ***")
-        raise SystemExit
-
-    input_line = file.readline()
-
-    directions = re.findall("\w+" , input_line)
-
-    s = 0
-    n = 0
-    se = 0
-    sw = 0
-    ne = 0
-    nw = 0
-
-
-    for direction in directions:
-        if (direction == "s"):
-            s += 1
-        elif (direction == "n"):
-            n += 1
-        elif (direction == "se"):
-            se += 1
-        elif (direction == "sw"):
-            sw += 1
-        elif (direction == "ne"):
-            ne += 1
-        elif (direction == "nw"):
-            nw += 1
-
-
+def getDistance(n , s , ne , se , nw , sw):
     if (ne > sw):
         ne -= sw
         sw = 0
@@ -148,8 +115,52 @@ def main():
             se -= s
             s = 0
 
+    return (n + s + ne + se + nw + sw)
 
-    print("Distance: " , n + s + ne + se + nw + sw)
+def main():
+    try:
+        file = open("Input_Day11" , "r")
+    except IOError:
+        print("*** ERROR: Could not open file for reading input ***")
+        raise SystemExit
+
+    input_line = file.readline()
+
+    directions = re.findall("\w+" , input_line)
+
+    s = 0
+    n = 0
+    se = 0
+    sw = 0
+    ne = 0
+    nw = 0
+    furthest_distance = 0;
+    current_distance = None;
+
+
+    for direction in directions:
+        if (direction == "s"):
+            s += 1
+        elif (direction == "n"):
+            n += 1
+        elif (direction == "se"):
+            se += 1
+        elif (direction == "sw"):
+            sw += 1
+        elif (direction == "ne"):
+            ne += 1
+        elif (direction == "nw"):
+            nw += 1
+
+        current_distance = getDistance(n , s , ne , se , nw , sw)
+
+        if (current_distance > furthest_distance):
+            furthest_distance = current_distance
+
+    print ("Furthest travelled distance: " , furthest_distance)
+
+
+
 
 
 main()
