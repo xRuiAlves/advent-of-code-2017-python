@@ -68,16 +68,6 @@ def main():
         s -= n;
         n = 0;
 
-    if (n>0 and nw>0):
-        if (n>nw):
-            sw += nw
-            n -= nw
-            nw = 0
-        else:
-            sw += n
-            nw -= n
-            n = 0
-
     if (n>0 and sw>0):
         if (n>sw):
             nw += sw
@@ -86,16 +76,6 @@ def main():
         else:
             nw += n
             sw -= n
-            n = 0
-
-    if (n>0 and ne>0):
-        if (n>ne):
-            se += ne
-            n -= ne
-            ne = 0
-        else:
-            se += n
-            ne -= n
             n = 0
 
     if (n>0 and se>0):
@@ -118,16 +98,6 @@ def main():
             nw -= s
             s = 0
 
-    if (s>0 and sw>0):
-        if (n>sw):
-            nw += sw
-            s -= sw
-            sw = 0
-        else:
-            nw += s
-            sw -= s
-            s = 0
-
     if (s>0 and ne>0):
         if (s>ne):
             se += ne
@@ -136,16 +106,6 @@ def main():
         else:
             se += s
             ne -= s
-            s = 0
-
-    if (s>0 and se>0):
-        if (s>se):
-            ne += se
-            s -= se
-            se = 0
-        else:
-            ne += s
-            se -= s
             s = 0
 
 
