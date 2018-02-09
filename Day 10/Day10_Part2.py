@@ -45,8 +45,15 @@ def knot_hash(string_to_hash):
             skip_size += 1
 
     dense_hash = get_dense_hash(my_list)
-    hashed_string = ''.join([hex(x) for x in dense_hash])
-    hashed_string = re.sub("0x","",hashed_string)
+    hex_digit = None
+    hashed_string = ""
+
+    for x in dense_hash:
+        hex_digit = hex(x)[2:]
+        if(len(hex_digit) == 1):
+            hex_digit = "0" + hex_digit
+        hashed_string += hex_digit
+
     return hashed_string
 
 def main():
