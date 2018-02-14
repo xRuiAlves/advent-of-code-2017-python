@@ -23,7 +23,7 @@ def main():
     i = 0
     j = find_starting_j(path)
     direction = "S"
-    walked_path = ""
+    num_steps = 0
 
     while(path[i][j] != NO_PATH):
         if (direction == "N"):
@@ -34,6 +34,8 @@ def main():
             i += 1
         elif (direction == "W"):
             j -= 1
+
+        num_steps += 1
 
 
         if (path[i][j] == V_PATH or path[i][j] == H_PATH):
@@ -51,10 +53,8 @@ def main():
                     direction = "S"
         elif (path[i][j] == NO_PATH):
             break
-        else:
-            walked_path += path[i][j]
 
-    print(walked_path)
+    print(num_steps)
 
 
 main()
