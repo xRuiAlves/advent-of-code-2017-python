@@ -47,7 +47,7 @@ def instruction_add(instruction):
     reg1_index = get_register_index(instruction[4])
 
     if (is_register(instruction[6])):
-        registers[reg1_index].val = get_reg_val(instruction[6])
+        registers[reg1_index].val += get_reg_val(instruction[6])
     else:
         registers[reg1_index].val += int(re.findall("-?\d+" , instruction)[0])
 
@@ -58,7 +58,7 @@ def instruction_mul(instruction):
     reg1_index = get_register_index(instruction[4])
 
     if (is_register(instruction[6])):
-        registers[reg1_index].val = get_reg_val(instruction[6])
+        registers[reg1_index].val *= get_reg_val(instruction[6])
     else:
         registers[reg1_index].val *= int(re.findall("-?\d+" , instruction)[0])
 
@@ -117,7 +117,7 @@ def execute_instruction(instruction):
         instruction_mul(instruction)
     elif (instruction[0]+instruction[1] == "mo"):
         instruction_mod(instruction)
-        
+
 
 def main():
     global program_counter
