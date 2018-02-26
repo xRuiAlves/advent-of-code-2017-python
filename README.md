@@ -23,5 +23,11 @@ You can check their 2015 and 2016 challenges, which are just as fun!!
 https://adventofcode.com/2015/
 <br /><br />
 <b>Advent Of Code 2016</b>:
+https://adventofcode.com/2016/<br />
+
+
+## Challenge Completed
+
+Challenge completed in 26-02-2018! Can't wait for next years edition :)
 <br />
-https://adventofcode.com/2016/
+![aoc-2017](https://user-images.githubusercontent.com/25830462/36700670-6956fe30-1b48-11e8-99ff-99185b79f7cc.png)
