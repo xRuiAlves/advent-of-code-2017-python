@@ -20,17 +20,11 @@ def main():
     c = b
     c += 17000
 
-    print(b)
-    print(c)
-
-
     while (c >= b):
         if (not(is_prime(b))):
             h += 1
         b += 17
 
-    print(b)
-    print(c)
     print(h)
 
 
