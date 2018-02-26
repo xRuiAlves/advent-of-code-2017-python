@@ -23,7 +23,8 @@ You can check their 2015 and 2016 challenges, which are just as fun!!
 https://adventofcode.com/2015/
 <br /><br />
 <b>Advent Of Code 2016</b>:
-https://adventofcode.com/2016/<br />
+<br />
+https://adventofcode.com/2016/<br /><br />
 
 
 ## Challenge Completed
